@@ -12,8 +12,8 @@ Question.destroy_all
 Survey.destroy_all
 User.destroy_all
 
-user1 = User.create(username: "Eli", password: "111")
-user2 = User.create(username: "Lebron", password: "222")
+user1 = User.create(username: "Eli", password_digest: "111")
+user2 = User.create(username: "Lebron", password_digest: "222")
 survey1 = Survey.create(name: "Software Engineering", user: user1)
 survey2 = Survey.create(name: "All Things NBA", user: user2)
 question1 = Question.create(content: "What is your favorite programming language?", survey: survey1)
