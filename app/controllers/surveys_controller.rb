@@ -20,4 +20,11 @@ class SurveysController < ApplicationController
         render json: @survey
     end
 
+    def destroy
+        @survey = Survey.find_by(id: params[:id])
+        @survey.questions.destroy_all
+        @survey.destroy
+        render json: {success: "Destroyed"}
+    end
+
 end
