@@ -9,11 +9,25 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         if @user.valid?
-        wristband = encode_token({user_id: @user.id})
-        render json: {user: UserSerializer.new(@user), token: wristband}
+            wristband = encode_token({user_id: @user.id})
+            render json: {user: UserSerializer.new(@user), token: wristband}
+        
+            # respond_to do |format|
+                if @user.valid?
+                  # Tell the UserMailer to send a welcome email after save
+                  UserMailer.with(user: @user).welcome_email.deliver_now
+                  format.html { redirect_to(@user, notice: 'User was successfully created.') }
+                  format.json { render json: @user, status: :created, location: @user }
+                else
+                  format.html { render action: 'new' }
+                  format.json { render json: @user.errors, status: :unprocessable_entity }
+                end
+            # end
+        
         else
-        render json: {error: "Invalid username or password"}
+            render json: {error: "Invalid username or password"}
         end
+
     end
 
     def login
@@ -34,7 +48,7 @@ class UsersController < ApplicationController
     
     private
     def user_params
-        params.permit(:username, :password)
+        params.permit(:username, :password, :image, :interest, :email)
     end
 
 end
