@@ -10,6 +10,7 @@
 Answer.destroy_all
 Question.destroy_all
 Survey.destroy_all
+UserSurveyJoiner.destroy_all
 User.destroy_all
 
 user1 = User.create(username: "Eli", password: "111", image: "https://media-exp1.licdn.com/dms/image/C5103AQFFZLdeCh71OQ/profile-displayphoto-shrink_200_200/0?e=1588204800&v=beta&t=w_9zy0BhYrW0crdEinLrvG_DTsSeWMKCFA4_2geS_b4", interest: "Software Engineering, Investing, Music, & Sports", email: "elirkantor@gmail.com")
@@ -17,6 +18,7 @@ user2 = User.create(username: "Lebron", password: "222", image: "https://ssref.n
 survey1 = Survey.create(name: "Software Engineering", user: user1)
 survey2 = Survey.create(name: "Favorite Dumbo Lunch Spot", user: user1)
 survey3 = Survey.create(name: "All Things NBA", user: user2)
+joiner1 = UserSurveyJoiner.create(user: user1, survey: survey2)
 question1 = Question.create(content: "What is your favorite programming language?", survey: survey1)
 question2 = Question.create(content: "What is your favorite Javascript framework?", survey: survey1)
 question4 = Question.create(content: "Where is your favorite place to get lunch?", survey: survey2)
