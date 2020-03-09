@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :favorites
   resources :answers
   resources :questions
   resources :user_survey_joiners
