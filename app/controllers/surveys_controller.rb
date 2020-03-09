@@ -22,6 +22,7 @@ class SurveysController < ApplicationController
 
     def destroy
         @survey = Survey.find_by(id: params[:id])
+        @survey.favorites.destroy_all
         @survey.user_survey_joiners.destroy_all
         @survey.questions.destroy_all
         @survey.destroy

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :favorites
   resources :answers
   resources :questions
+  resources :favorites
   resources :user_survey_joiners
   resources :surveys
   resources :users

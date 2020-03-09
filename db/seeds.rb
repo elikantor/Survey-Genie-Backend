@@ -9,6 +9,7 @@
 
 Answer.destroy_all
 Question.destroy_all
+Favorite.destroy_all
 UserSurveyJoiner.destroy_all
 Survey.destroy_all
 User.destroy_all
