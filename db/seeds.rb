@@ -14,7 +14,7 @@ UserSurveyJoiner.destroy_all
 Survey.destroy_all
 User.destroy_all
 
-user1 = User.create(username: "Eli", password: "111", image: "https://media-exp1.licdn.com/dms/image/C5103AQFFZLdeCh71OQ/profile-displayphoto-shrink_200_200/0?e=1588204800&v=beta&t=w_9zy0BhYrW0crdEinLrvG_DTsSeWMKCFA4_2geS_b4", interest: "Software Engineering, Investing, Music, & Sports", email: "elirkantor@gmail.com")
+user1 = User.create(username: "Eli", password: "Sunshine1$", image: "https://media-exp1.licdn.com/dms/image/C5103AQFFZLdeCh71OQ/profile-displayphoto-shrink_200_200/0?e=1595462400&v=beta&t=dC9DF2u4EUpKRWOiCofnHE64Bq8rPojnCDOAg37Cqfs", interest: "Software Engineering, Investing, Music, & Sports", email: "elirkantor@gmail.com")
 user2 = User.create(username: "Lebron", password: "222", image: "https://ssref.net/scripts/image_resize.cgi?min=200&url=https://d2cwpp38twqe55.cloudfront.net/req/202002141/images/players/jamesle01.jpg", interest: "Basketball.  Winning.  Tacos.", email: "Undisclosed")
 user3 = User.create(username: "Erin Burnett", password: "3", image: "https://marriedbio.com/uploads/2017/03/Erin-Burnett.jpg", interest: "Politics & TV", email: "http://outfront.blogs.cnn.com/")
 user4 = User.create(username: "Billie Eilish", password: "4", image: "https://cdn.cnn.com/cnnnext/dam/assets/200127015635-billie-eilish-large-169.jpg", interest: "Music and stuff", email: "https://www.billieeilish.com/")
