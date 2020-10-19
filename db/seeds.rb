@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require 'open-uri'
 
 Answer.destroy_all
 Question.destroy_all
@@ -14,7 +14,7 @@ UserSurveyJoiner.destroy_all
 Survey.destroy_all
 User.destroy_all
 
-user1 = User.create(username: "Eli", password: "Sunshine1$", image: "https://avatars3.githubusercontent.com/u/54642138?s=400&u=351a1b6f3f1b6e2ea11e44795b8595a5bb62fa19&v=4", interest: "Software Engineering, Investing, Music, & Sports", email: "elirkantor@gmail.com")
+user1 = User.create(username: "Eli", password: "Sunshine1$", image: "https://media-exp1.licdn.com/dms/image/C5103AQFFZLdeCh71OQ/profile-displayphoto-shrink_200_200/0?e=1608768000&v=beta&t=TE3EuvozbJJcZ-vi1DqGnVE9XlppC_uOykTPJeY4Ol8", interest: "Software Engineering, Investing, Music, & Sports", email: "elirkantor@gmail.com")
 user2 = User.create(username: "Lebron", password: "222", image: "https://ssref.net/scripts/image_resize.cgi?min=200&url=https://d2cwpp38twqe55.cloudfront.net/req/202002141/images/players/jamesle01.jpg", interest: "Basketball.  Winning.  Tacos.", email: "Undisclosed")
 user3 = User.create(username: "Erin Burnett", password: "3", image: "https://marriedbio.com/uploads/2017/03/Erin-Burnett.jpg", interest: "Politics & TV", email: "http://outfront.blogs.cnn.com/")
 user4 = User.create(username: "Billie Eilish", password: "4", image: "https://cdn.cnn.com/cnnnext/dam/assets/200127015635-billie-eilish-large-169.jpg", interest: "Music and stuff", email: "https://www.billieeilish.com/")
